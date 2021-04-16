@@ -102,6 +102,7 @@ section.entry {
 
 .thoughts {
     grid-area: thoughts;
+    width: 100%;
 }
 button:active {
     color:royalblue;
