@@ -1,0 +1,109 @@
+body /* element selector for entire page basically */ {
+    background-color: rgb(37, 33, 33); /* rgb background color*/
+    font-family: 'Rubik', sans-serif;
+    color: #dddd;
+}
+
+* {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+      color: rgb(207, 95, 30);
+    }
+  }
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border-style: dotted;
+    border-color: aquamarine;
+    border-width: 2.5px;
+    border-radius: 1cm; 
+    padding-top: 2em;
+    padding-right: 0.5em;
+    padding-bottom: 2em;
+    padding-left: 0.5em;
+    min-width: 5vw;
+}
+
+/*margin-top: 10px;
+    margin-right: 25%;
+    margin-bottom: 10px;
+    margin-left: 25%;?
+    */
+header .header-children { /* descendant selector */
+    margin: auto;
+}
+
+header > #website-title { /* child selector */
+    height: 10vh; /* height relative to viewport */
+}
+
+#website-title + #uninteresting { /* adjacent sibling selector*/
+    display: inline-block;
+}
+
+#website-title ~ #uninteresting:hover { /* general sibing selector */
+    display: none;
+}
+
+
+nav {
+    margin: 0px 0px 0px 0px;
+    padding: 2px 2px 2px 2px;
+    position: fixed;
+    bottom: 0.1in;
+    right: 0.2in;
+    background-color: rgba(76, 223, 174, 0.527);
+    border-radius: 5px;
+}
+
+a[href] {
+    text-decoration: none;
+    color: hsl(236, 75%, 83%);
+}
+
+#underline { /* id selector */
+    text-decoration: underline dotted;
+}
+
+section.entry {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "title title title"
+        "highlights lowlights ."
+        "thoughts thoughts thoughts";
+    position: relative;
+    left: 0.5in;
+    text-align: left;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+
+.entry h2 {
+    grid-area: title;
+}
+
+.highlights {
+    grid-area: highlights;
+}
+
+.lowlights {
+    grid-area: lowlights;
+}
+
+.thoughts {
+    grid-area: thoughts;
+}
+button:active {
+    color:royalblue;
+    background-color: royalblue;
+}
